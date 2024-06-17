@@ -2,10 +2,10 @@ import google.generativeai as palm
 import telebot
 
 # Your Telegram bot token
-TOKEN = 'YOUR_TELEGRAM_BOT_TOKEN'
+TOKEN = '5636862844:AAGG7jioAoBUoe3KINGbZpQZQFMCBAky1oo'
 
 # Configure the generative AI API key
-palm.configure(api_key="YOUR_GENERATIVE_AI_API_KEY")
+palm.configure(api_key="AIzaSyCDILzurQ1o7f-98cBZrSenRqtVUbTD9DI")
 
 # Create a Telegram bot instance
 bot = telebot.TeleBot(TOKEN)
@@ -14,7 +14,7 @@ bot = telebot.TeleBot(TOKEN)
 @bot.message_handler(commands=['start', 'help', 'hello'])
 def send_welcome(message):
     name = message.from_user.first_name
-    bot.reply_to(message, f"Hello {name}! Ask me about anything")
+    bot.reply_to(message, f"Hello {name}! This Royal Katsic Ai, Ask me about anything")
 
 # Handle all other messages
 @bot.message_handler(func=lambda message: True)
